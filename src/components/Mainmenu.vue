@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="/home">Ask Arcell</a>
+                  <a class="navbar-brand" href="/">Ask Arcell</a>
                 </div>
                 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -19,7 +19,7 @@
                     <li role="presentation" v-for="item in arrNav" v-link-active v-if="item.auth || authenticated">
                       <a v-link="{ path: item.id, exact: true }">{{ item.title}}</a>
                     </li>
-                    <li><a target="_blank" href="https://twitter.com/arcellg">Tweet</a></li>
+                    <li><a target="_blank" href="https://twitter.com/AskArcell69">Tweet</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li> <a href="javascript:void( window.open( 'https://form.jotform.us/62585570178162', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) ">Contact</a></li>
@@ -27,7 +27,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.email}} <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                         <li class="logBtn" v-if="authenticated" v-on:click="logout()" href="#">Log Out</li>
-                        <li class="logBtn" v-else v-on:click="logout()" href="#">Log In</li>
+                        <li class="logBtn" v-else v-on:click="login()" href="#">Log In</li>
                       </ul>
                     </li>                   
                   </ul>
@@ -69,7 +69,7 @@ export default {
       {
         'title': 'Ask',
         'id': '/ask',
-        'auth': false
+        'auth': true
       },
       {
         'title': 'Questions',
@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     login() {
-      window.location.href = 'auth.html'
+      window.location.href = '/auth.html'
     },
     logout() {
       console.log('out')
@@ -123,6 +123,10 @@ body{
 	height: 100%;
 	z-index: 1;
 
+}
+
+p {
+  font-family: 'Carter One', cursive;
 }
 
 .bg-bubbles {
@@ -288,11 +292,12 @@ body{
 }
 
 .navbar-inverse .navbar-nav>li>a, .navbar-brand, .dropdown .dropdown-menu {
-    color: #9d9d9d;
-    font-family: sans-serif;
+    color: #25CED1;
+    font-family: 'Carter One', cursive;
 }
-.navbar-inverse, .navbar-brand{
+.navbar-inverse .navbar-brand{
     font-family: 'Permanent Marker', cursive;
+    color: #fff;
 
 }
 .logBtn{

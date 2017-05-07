@@ -68,7 +68,7 @@ function setRouter() {
 // check if route requires authentication
 router.beforeEach(function (transition) {
   if (transition.to.auth && !authenticated) {
-     transition.redirect('/home')
+     transition.redirect('/index.html#!/')
   } else {
     transition.next()
   }

@@ -31,13 +31,13 @@
 
     <div v-for="item in questions | orderBy 'time' -1 " class="row">
       <div class="cell">
-        {{item.name}}
+        <p>{{item.name}}</p>
       </div>
       <div class="cell">
-        {{item.body}}
+        <p>{{item.body}}</p>
       </div>
       <div class="cell">
-        {{item.time}}
+        <p>{{item.time}}</p>
         <span v-if="deleting === true"><button v-on:Click="deleteItem($key)" class="btn btn-danger">Delete</button></span>
       </div>
     </div>
@@ -108,7 +108,9 @@ export default {
 
 h1, h2 {
   font-weight: normal;
-    font-family: 'Permanent Marker', cursive;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 2px 2px 2px #A62639;
+  letter-spacing: 2px;
 
 }
 .page-header h1 {
@@ -127,8 +129,9 @@ li {
 a {
   color: #fff;
 }
-p{
-  font-size: 15pt;
+.jumbotron h1 {
+  color: #000;
+  text-shadow: 2px 2px 2px #A62639;
 }
 .container .jumbotron, .container-fluid .jumbotron {
     background: rgba(255, 255, 255, .8);

@@ -52,11 +52,16 @@ h1{
     font-family: 'Permanent Marker', cursive;
 
 }
-
+.page-header h1 {
+  color: #fff;
+  text-shadow: 2px 2px 2px #A62639;
+  font-size: 4em;
+}
 
 .ask {
-  padding-top: 10%;
+  padding-top: 5%;
 }
+
 
 </style>
 

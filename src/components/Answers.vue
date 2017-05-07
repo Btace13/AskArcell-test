@@ -18,7 +18,9 @@
                 <textarea v-model="answer" class="form-control" cols="30" rows="5" placeholder="Answer"></textarea>
                 <button class="btn btn-info btn-block" v-on:Click="submit()">Submit</button>
               </div>
+              <div class="jumbotron">
               <h1>ANSWERED QUESTIONS</h1>
+              </div>
               <br/>
               <hr/>
                <div class="wrapper">
@@ -42,16 +44,16 @@
 
                             <div v-for="item in answers | orderBy 'time' -1 " class="rowT">
                             <div class="cell">
-                                {{item.userName}}
+                                <p>{{item.userName}}</p>
                             </div>
                             <div class="cell">
-                                {{item.question}}
+                                <p>{{item.question}}</p>
                             </div>
                             <div class="cell">
-                                {{item.answer}}
+                                <p>{{item.answer}}</p>
                             </div>
                             <div class="cell">
-                                {{item.time}}
+                                <p>{{item.time}}</p>
                             </div>
                             </div>
   
@@ -131,6 +133,14 @@ h1, h2 {
     font-family: 'Permanent Marker', cursive;
 
 }
+.jumbotron h1 {
+  color: #000;
+  text-shadow: 2px 2px 2px #A62639;
+  letter-spacing: 2px;
+}
+.container .jumbotron, .container-fluid .jumbotron {
+    background: rgba(255, 255, 255, .8);
+}
 ul {
   list-style-type: none;
   padding: 0;
@@ -143,9 +153,6 @@ li {
 
 a {
   color: #42b983;
-}
-p{
-  font-size: 15pt;
 }
 .adminSection{
     background: rgba(255, 255, 255, .8);
